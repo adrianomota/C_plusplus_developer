@@ -1,15 +1,15 @@
-#include "model/people.hpp"
+#include "model/person.cpp"
 
 int main() 
 {
-  People people_one("Miguel", "Mota");
-  people_one.ToString();
+  Person person_one("Miguel", "Mota");
+  person_one.ToString();
 
-  People people_two("Adriano", "Mota");
-  people_two.ToString();
+  Person person_two("Adriano", "Mota");
+  person_two.ToString();
 
-  People people_three("Gleyce", "Mota");
-  people_three.ToString();
+  Person person_three("Gleyce", "Mota");
+  person_three.ToString();
 
   return 0;
 }

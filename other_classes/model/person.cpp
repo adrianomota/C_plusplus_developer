@@ -12,12 +12,26 @@ Person::Person(string firstName, string lastName)
 
 void Person::setFirstName(string firstName)
 {
-   _firstName = firstName;
+  if(firstName.length() <= 20)
+    _firstName = firstName;
+  
+  if(firstName.length() >= 20)
+  {
+    _firstName = firstName.substr(0,20);
+    cout << "A maximun of 20 characters are allowed!" << endl;
+  }
 }
 
 void Person::setLastName(string lastName)
 {
-   _lastName = lastName;   
+  if(lastName.length() <= 20)
+    _lastName = lastName;   
+
+  if(lastName.length() >= 20)
+  {
+    _lastName = lastName.substr(0,20);   
+    cout << "A maximun of 20 characters are allowed!" << endl;
+  }
 }
 
 string Person::getFirstname()
